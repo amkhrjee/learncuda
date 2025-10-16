@@ -1,1 +1,1 @@
-Code examples from the book CUDA by examples.
+Learning CUDA with examples!
