@@ -19,5 +19,6 @@ int main(void)
         std::cout << "Device Sparse Array support: " << (prop.sparseCudaArraySupported ? "True" : "False") << std::endl;
         std::cout << "Device Streaming Multiprocessor count: " << prop.multiProcessorCount << std::endl;
         std::cout << "Device Memory: " << prop.totalGlobalMem / (1 << 30) << "GB" << std::endl;
+        std::cout << "----------------------------" << std::endl;
     }
 }
