@@ -8,7 +8,10 @@ __global__ void vectorAdd(int *__restrict a, int *__restrict b, int *__restrict 
 {
     int tid = (blockIdx.x * blockDim.x) + threadIdx.x;
     if (tid < N)
+    {
         c[tid] = a[tid] + b[tid];
+        // tid += blockDim.x * gridDim.x;
+    }
 }
 
 void verify_result(std::vector<int> &a, std::vector<int> &b, std::vector<int> &c)
@@ -21,7 +24,7 @@ void verify_result(std::vector<int> &a, std::vector<int> &b, std::vector<int> &c
 
 int main(void)
 {
-    constexpr int N = 1 << 16;
+    constexpr int N = 33 * 1024;
     constexpr size_t bytes = sizeof(int) * N;
 
     // These are on CPU (aka "the host")
