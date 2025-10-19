@@ -15,4 +15,14 @@
         }                                                                                              \
     } while (0);
 
+#define HANDLE_NULL(a)                                      \
+    {                                                       \
+        if (a == NULL)                                      \
+        {                                                   \
+            printf("Host memory failed in %s at line %d\n", \
+                   __FILE__, __LINE__);                     \
+            exit(EXIT_FAILURE);                             \
+        }                                                   \
+    }
+
 #endif
