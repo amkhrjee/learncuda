@@ -1,3 +1,4 @@
 *.out
 *.sqlite
 *.nsys-rep
+.vscode
