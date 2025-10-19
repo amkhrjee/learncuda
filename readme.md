@@ -1,1 +1,7 @@
-Learning CUDA with examples!
+My musings while I teach myself CUDA programming.
+
+Resources used include but are not restricted to:
+
+1. _CUDA By Examples_ by E. Kandrot
+2. [CUDA Crash Course](https://www.youtube.com/@NotesByNick) by Nick
+3. [The CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/) by NVIDIA
