@@ -25,7 +25,10 @@ int main(void)
     HANDLE_ERROR(cudaGetDevice(&whichDevice));
     HANDLE_ERROR(cudaGetDeviceProperties_v2(&props, whichDevice));
     if (!props.deviceOverlap)
+    {
         std::cout << "Device does not support streams :(" << std::endl;
+        exit(EXIT_FAILURE);
+    }
 
     cudaEvent_t start, stop;
     float elapsedTime;
